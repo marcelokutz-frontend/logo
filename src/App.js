@@ -13,7 +13,7 @@ function App() {
       <div className="App">
         <Header />
         <Switch>
-          <Route exact path="/" component={HomePage} />
+          <Route exact path="/jobs/logotel" component={HomePage} />
         </Switch>
         <Footer />
       </div>
