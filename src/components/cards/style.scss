@@ -1,8 +1,9 @@
 @import "../../styles/utilities/theme";
 
 .cards {
+	position: relative;
+	z-index: 2;
 	display: flex;
-	background-color: #ebebeb;
 	padding-top: 70px;
 	padding-bottom: 70px;
 	.container {
@@ -83,13 +84,13 @@
 				position: absolute;
 				right: 0;
 				bottom: -2px;
-				background-color: $white;
+				background-color: #F3F3F3;
 				transition: all 0.4s;
 			}
 		}
 	}
 	.card__block {
-		background-color: $white;
+		background-color: #F3F3F3;
 		position: relative;
 		height: 100%;
 		&:after {

@@ -1,0 +1,131 @@
+@import "../../styles/utilities/theme";
+
+.cards-list {
+    position: relative;
+	display: flex;
+	background-color: #fff;
+	padding-top: 70px;
+    padding-bottom: 70px;
+    padding-top: 20vw;
+	.container {
+		display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 2;
+    }
+    .onda {
+        display: block;
+        width: 100%;
+        background-color: $white;
+        position: absolute;
+        left: 0;
+        top: -5px;
+        z-index: 0;
+        pointer-events: none;
+        overflow: hidden;
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+}
+    .cards-color {
+        &__item {
+            position: relative;
+            width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-bottom: 30px;
+            @media(min-width: 992px) {
+                width: 33.33333%;
+                margin-bottom: 0;
+            }
+            .btn-cta {
+                display: inline-block;
+                border: 1px solid $white;
+            }
+            &--cards-color-01 .cards-color__block {   
+                background-color: $tc;
+                color: $white;
+                .btn-cta {
+                    color: $tc;
+                    background-color: $white;
+                    &:hover {
+                        color: $white;
+                        background-color: $tc;
+                    }
+                }
+            }
+            &--cards-color-02 .cards-color__block {   
+                background-color: $white;
+                h2 {
+                    color: $tc3;
+                    border-color: $tc3;
+                }
+                .btn-cta {
+                    border-color: $tc3;
+                    color: $white;
+                    background-color: $tc3;
+                    &:hover {
+                        color: $tc3;
+                        background-color: $white;
+                    }
+                }
+            }
+            &--cards-color-03 .cards-color__block {   
+                background-color: $white;
+                h2 {
+                    color: $tc4;
+                    border-color: $tc4;
+                }
+                .btn-cta {
+                    border-color: $tc4;
+                    color: $white;
+                    background-color: $tc4;
+                    &:hover {
+                        color: $tc4;
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+        &__block {
+            background-color: $white;
+            position: relative;
+            height: 100%;
+            border-radius: 20px;
+            text-align: center;
+            padding: 30px 40px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.20);
+            h2 {
+                font-size: 34px;
+                padding-bottom: 15px;
+                border-bottom: 1px solid $white;
+                text-transform: uppercase;
+                font-family: $font01;
+                font-weight: 700;
+            }
+        }
+        &__image {
+            margin-bottom: 15px;
+            height: 250px;
+            width: 100%;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+        }
+        &__text {
+            min-height: 96px;
+            display: block;
+            overflow: hidden;
+            p {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+    
+    
+    
+    
+    

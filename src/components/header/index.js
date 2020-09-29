@@ -59,7 +59,7 @@ class Header extends Component {
                     <li><Link activeClass="active" to="slider" spy={true} smooth={true} offset={-50} duration={500} title="SLIDER">SLIDER</Link></li>
                     <li><Link activeClass="active" to="news" spy={true} smooth={true} offset={-100} duration={500} title="NEWS">NEWS</Link></li>
                     <li><Link activeClass="active" to="percorso" spy={true} smooth={true} offset={-50} duration={500} title="PERCORSO">PERCORSO</Link></li>
-                    <li><Link activeClass="active" to="tab" spy={true} smooth={true} offset={-50} duration={500} title="TAB">TAB</Link></li>
+                    <li><Link activeClass="active" to="tab" spy={true} smooth={true} offset={190} duration={500} title="TAB">TAB</Link></li>
                   </ul>
                 </nav>
             </div>

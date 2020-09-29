@@ -35,6 +35,16 @@ a {
 	}
 }
 
+.site-title {
+	h1 {
+		color: $tc;
+		font-weight: 700;
+		@media(min-width: 992px) {
+			font-size: 60px;
+		}
+	}
+}
+
 @keyframes fadeInUp {
 	from {
 	  	opacity: 0;

@@ -14,8 +14,10 @@ const CardsColor = (props) => (
             <div className="cards-color__image">  
               <img src={props.imgBackground} alt={props.title} />
             </div>
-            <p>{props.content}</p>
-            <a href={props.buttonURL} className="cards-color__btn" title={props.buttonName}>{props.buttonName}</a>
+            <div className="cards-color__text">  
+              <p>{props.content}</p>
+            </div>
+            <a href={props.buttonURL} className="btn-cta" title={props.buttonName}>{props.buttonName}</a>
           </div>
         </Reveal>
       </div>
