@@ -80,8 +80,7 @@
 			background: url(../../images/chevron-destra.svg) no-repeat 50% 50%;
 		}
 	}
-}
-	.slideshow__item {
+	&__item {
 		height: 100vh;
 		display: flex;
 		align-items: center;
@@ -95,48 +94,76 @@
 			max-width: 1100px;
 		}
 	}
-
-		.slideshow__description {
+	&__description {
+		max-width: 550px;
+		color: $white;
+		@media(min-width: 992px) {
+			max-width: 650px;
+			margin-left: 80px;
+		}
+		@media(min-width: 1200px) {
 			max-width: 550px;
-			color: $white;
-			p {
+			margin-left: 0px;
+		}
+		p {
+			font-size: 16px;
+			@media(min-width: 992px) {
 				font-size: 20px;
 			}
 		}
-
-		.slideshow__title {
-			position: relative;
-			font-size: 30px;
-			font-weight: 700;
-			line-height: 1.333em;
-			margin: 0 0 25px;
-			left: -100px;
-			opacity: 0;
-			transition: all 0.8s ease-in-out 1.6s;
-			@media(min-width: 992px) {
-				font-size: 60px;
-			}
-			.slick-current & {
-				left: 0;
-				opacity: 1;
-				transition: all 1.2s;
-			}
-		}
-
-		.slideshow__text {
-			position: relative;
-			left: -100px;
-			opacity: 0;
-			overflow: hidden;
-			margin-bottom: 30px;
-			transition: all 0.8s ease-in-out 1.6s;
-
-			.slick-current & {
-				left: 0;
-				opacity: 1;
-				transition: all 1.2s ease 0.4s;
-			}
-		}
-	.slick-current {
-		z-index: 1;
 	}
+	&__title {
+		position: relative;
+		font-size: 25px;
+		font-weight: 700;
+		line-height: 1.23em;
+		margin: 0 0 15px;
+		left: -100px;
+		opacity: 0;
+		transition: all 0.8s ease-in-out 1.6s;
+		@media(min-width: 992px) {
+			font-size: 44px;
+			line-height: 1.2em;
+			margin-bottom: 25px;
+		}
+		@media(min-width: 1200px) {
+			font-size: 60px;
+			line-height: 1.333em;
+			margin-bottom: 25px;
+		}
+		.slick-current & {
+			left: 0;
+			opacity: 1;
+			transition: all 1.2s;
+		}
+	}
+	&__text {
+		position: relative;
+		left: -100px;
+		opacity: 0;
+		overflow: hidden;
+		font-size: 16px;
+		margin-bottom: 30px;
+		transition: all 0.8s ease-in-out 1.6s;
+		@media(min-width: 992px) {
+			font-size: 20px;
+		}
+
+		.slick-current & {
+			left: 0;
+			opacity: 1;
+			transition: all 1.2s ease 0.4s;
+		}
+	}
+}
+.slick-current {
+	z-index: 1;
+}
+	
+
+		
+
+		
+
+		
+	

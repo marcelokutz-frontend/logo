@@ -28,6 +28,7 @@
 		width: 100%;
 		background-position: 50% 50%;
 		background-size: cover;
+		margin-bottom: 15px;
 		&:after {
 			content: "";
 			display: block;
@@ -41,16 +42,20 @@
 		left: 0;
 		top: 0;
 		width: 100%;
-		height: 240px;
+		@media(min-width: 992px) {
+			height: 240px;
+		}
 	}
 	.card__content {
 		padding: 20px;
-		position: absolute;
 		transition: all 0.4s;
 		width: 100%;
-		left: 0;
-		bottom: 0;
 		z-index: 2;
+		@media(min-width: 992px) {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
 	}
 	.card_header {
 		p {
@@ -123,29 +128,31 @@
 			}
 		}
 	}
+	@media(min-width: 992px) {
 
-	.card__item:hover {
-		.card__text {
-			p {
-				color: $white;
-				max-height: 400px;
-				&:after {
-					opacity: 0;
-					background-color: $tc;
+		.card__item:hover {
+			.card__text {
+				p {
+					color: $white;
+					max-height: 400px;
+					&:after {
+						opacity: 0;
+						background-color: $tc;
+					}
 				}
 			}
-		}
-		.card__content {
-			h2 {
-				color: $white;
+			.card__content {
+				h2 {
+					color: $white;
+				}
+				.card__date {
+					color: $white;
+				}
 			}
-			.card__date {
-				color: $white;
-			}
-		}
-		.card__block {
-			&:after {
-				opacity: 1;
+			.card__block {
+				&:after {
+					opacity: 1;
+				}
 			}
 		}
 	}

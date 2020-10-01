@@ -3,36 +3,59 @@
 .timeline {
     position: relative;
     z-index: 1;
-    padding-top: 60px;
+    padding-top: 0;
     background: #272727;
     background: -moz-linear-gradient(top,  #272727 30%, #464646 100%);
     background: -webkit-linear-gradient(top,  #272727 30%,#464646 100%);
     background: linear-gradient(to bottom,  #272727 30%,#464646 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#272727', endColorstr='#464646',GradientType=0 );
     color: $white;
+    margin-top: 80px;
+	@media(min-width: 1200px) {
+        padding-top: 60px;
+        margin-top: 0;
+    }
     .onda-1 {
         display: block;
         width: 100%;
         background-color: $white;
         position: absolute;
         left: 0;
-        top: -10vw;
+        top: -7vw;
         z-index: 0;
         pointer-events: none;
         overflow: hidden;
+        @media(min-width: 1024px) {
+            top: -10vw;
+        }
         img {
             width: 100%;
             display: block;
-            margin-bottom: -10px;
+            margin-bottom: -4px;
+            @media(min-width: 992px) {
+                margin-bottom: -10px;
+            }
         }
     }
     .site-title {
-        margin-bottom: 17vw;
+        margin-bottom: 50px;
         position: relative;
         z-index: 2;
+        min-height: 27vw;
+        @media(min-width: 992px) {
+            margin-bottom: 17vw;
+            min-height: inherit;
+        }
         h1 {
+            text-align: right;
+            padding-left: 17vw;
+            @media(max-width: 480px) {
+                font-size: 8vw;
+                position: relative;
+                top: -124px;
+            }
             @media(min-width: 992px) {
-                text-align: right;
+                padding-left: 0;
             }
         }
     }
@@ -42,18 +65,44 @@
     }
     &__list {
         max-width: 560px;
-        width: 100%;
-        margin: 0 auto;
+        margin: 0 50px;
+        @media(min-width: 768px) {
+            margin: 0 auto;
+        }
+        @media(min-width: 992px) {
+            width: 100%;
+            margin: 0 auto;
+        }
+        @media(min-width: 1024px) {
+            max-width: 460px;
+        }
+        @media(min-width: 1200px) {
+            max-width: 560px;
+        }
     }
 
     &__card {
         position: relative;
         padding-top: 80px;
-        padding-bottom: 80px;
+        padding-bottom: 50px;
+        @media(min-width: 992px) {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        @media(min-width: 1200px) {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
         h2 {
-            font-size: 34px;
+            font-size: 24px;
             font-weight: 700;
             font-family: $font02;
+            @media(min-width: 992px) {
+                font-size: 28px;
+            }
+            @media(min-width: 1200px) {
+                font-size: 34px;
+            }
             span {
                 display: block;
                 font-size: 80px;
@@ -67,6 +116,12 @@
             padding-right: 0;
             padding-left: 140px;    
             transform: translate(-75px,0%);
+            h2 {
+                display: none;
+                @media(min-width: 992px) {
+                    display: block;
+                }
+            }
         }
         &__image {
             position: absolute;
@@ -147,6 +202,11 @@
             border-radius: 60px 0 0 0;
             border-right: none;
             border-bottom: none;
+            .timeline__description {
+                @media(max-width: 991px) {
+                    margin-right: -60px;
+                }
+            }
         }
         &:nth-child(odd) {
             border: 10px solid $white;
@@ -163,6 +223,11 @@
                 .timeline__card__image {
                     left: auto;
                     right: 0;
+                }
+            }
+            .timeline__description {
+                @media(max-width: 991px) {
+                    margin-left: -60px;
                 }
             }
         }
@@ -195,9 +260,17 @@
     &__description {
         overflow: hidden;
         max-height: 0px;
-        padding-right: 80px;
-        padding-left: 80px;
+        padding-right: 20px;
+        padding-left: 20px;
         transition: all 0.8s;
+        @media(min-width: 992px) {
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+        @media(min-width: 1200px) {
+            padding-right: 80px;
+            padding-left: 80px;
+        }
         p {
             font-size: 16px;
             line-height: 24px;

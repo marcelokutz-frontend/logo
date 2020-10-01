@@ -56,10 +56,10 @@ class Header extends Component {
             <div className="site-header__wrapper">
                 <nav className="site-header__navigation">
                   <ul className="nav site-header__navigation__menu">
-                    <li><Link activeClass="active" to="slider" spy={true} smooth={true} offset={-50} duration={500} title="SLIDER">SLIDER</Link></li>
-                    <li><Link activeClass="active" to="news" spy={true} smooth={true} offset={-100} duration={500} title="NEWS">NEWS</Link></li>
-                    <li><Link activeClass="active" to="percorso" spy={true} smooth={true} offset={-50} duration={500} title="PERCORSO">PERCORSO</Link></li>
-                    <li><Link activeClass="active" to="tab" spy={true} smooth={true} offset={190} duration={500} title="TAB">TAB</Link></li>
+                    <li><Link activeClass="active" to="slider" spy={true} smooth={true} offset={-50} duration={500} title="SLIDER" onClick={() => this.openMenuComponent()}>SLIDER</Link></li>
+                    <li><Link activeClass="active" to="news" spy={true} smooth={true} offset={-100} duration={500} title="NEWS" onClick={() => this.openMenuComponent()}>NEWS</Link></li>
+                    <li><Link activeClass="active" to="percorso" spy={true} smooth={true} offset={-50} duration={500} title="PERCORSO" onClick={() => this.openMenuComponent()}>PERCORSO</Link></li>
+                    <li><Link activeClass="active" to="tab" spy={true} smooth={true} offset={190} duration={500} title="TAB" onClick={() => this.openMenuComponent()}>TAB</Link></li>
                   </ul>
                 </nav>
             </div>

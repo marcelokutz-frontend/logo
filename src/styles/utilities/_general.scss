@@ -24,14 +24,20 @@ a {
 
 .btn-cta {
 	background-color: $tc;
+	border: 1px solid $tc;
 	color: $white;
 	font-weight: 700;
-	font-size: 20px;
-	padding: 20px 25px;
+	font-size: 16px;
+	padding: 18px 20px;
 	border-radius: 16px;
 	transition: all 0.4s;
+	@media(min-width: 992px) {
+		font-size: 20px;
+		padding: 20px 25px;
+	}
 	&:hover {
-		background-color: $tc2;
+		background-color: $white;
+		color: $tc;
 	}
 }
 
@@ -39,7 +45,17 @@ a {
 	h1 {
 		color: $tc;
 		font-weight: 700;
+		font-size: 25px;
+		@media(min-width: 580px) {
+			font-size: 30px;
+		}
+		@media(min-width: 768px) {
+			font-size: 40px;
+		}
 		@media(min-width: 992px) {
+			font-size: 44px;
+		}
+		@media(min-width: 1200px) {
 			font-size: 60px;
 		}
 	}

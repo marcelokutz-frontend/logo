@@ -12,6 +12,7 @@
         flex-wrap: wrap;
         position: relative;
         z-index: 2;
+        justify-content: center;
     }
     .onda {
         display: block;
@@ -28,6 +29,17 @@
             display: block;
         }
     }
+    .site-title {
+        width: 100%;
+        padding-top: 80px;
+        margin-bottom: 30px;
+        @media(min-width: 992px) {
+            padding-top: 0;
+            h1 {
+                max-width: 900px;
+            }
+        }
+    }
 }
     .cards-color {
         &__item {
@@ -36,6 +48,9 @@
             padding-left: 10px;
             padding-right: 10px;
             margin-bottom: 30px;
+            @media(min-width: 768px) {
+                width: 50%;
+            }
             @media(min-width: 992px) {
                 width: 33.33333%;
                 margin-bottom: 0;
@@ -95,15 +110,21 @@
             height: 100%;
             border-radius: 20px;
             text-align: center;
-            padding: 30px 40px;
+            padding: 20px 25px;
             box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.20);
+            @media(min-width: 992px) {
+                padding: 30px 40px;
+            }
             h2 {
-                font-size: 34px;
+                font-size: 26px;
                 padding-bottom: 15px;
                 border-bottom: 1px solid $white;
                 text-transform: uppercase;
                 font-family: $font01;
                 font-weight: 700;
+                @media(min-width: 992px) {
+                    font-size: 34px;
+                }
             }
         }
         &__image {
@@ -118,6 +139,7 @@
             min-height: 96px;
             display: block;
             overflow: hidden;
+            margin-bottom: 20px;
             p {
                 margin-bottom: 0;
                 padding-bottom: 0;

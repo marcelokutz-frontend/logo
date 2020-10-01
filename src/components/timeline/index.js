@@ -4,18 +4,16 @@ import './style.scss';
 
 class Timeline extends Component {
     constructor(props) {
-        super();
+        super(props);
 
         this.state = {
             active: false
         }
     }
-
-    
   
-     toggle(e){
+    toggle(e){
         this.setState({active: !this.state.active});
-     }
+    }
 
     render() { 
         return (

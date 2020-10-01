@@ -9,22 +9,30 @@
 .site-header {
 	background-color: rgba(39, 39, 39, 0.8);
 	transition: all 0.4s;
-	padding-top: 30px;
-	padding-bottom: 30px;
-	&.site-header--scroll {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	@media(min-width: 992px) {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	&--scroll {
 		background-color: rgba(39, 39, 39, 0.8);
 		padding-top: 10px;
 		padding-bottom: 10px;
+		@media(min-width: 992px) {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
 		.site-header__brand {
 			img {
-				width: 130px;
+				width: 100px;
+				@media(min-width: 992px) {
+					width: 130px;
+				}
 			}
 		}
 	}
 	> .container {
-		min-height: 60px;
-		padding-top: 17px;
-		padding-bottom: 17px;
 		position: relative;
 		z-index: 2;
 		margin: 0 auto;
@@ -35,6 +43,7 @@
 			align-items: center;
 			padding-top: 0;
 			padding-bottom: 0;
+			min-height: 60px;
 		}
 	}
 }
@@ -63,8 +72,11 @@
 	z-index: 2;
 	img {
 		display: block;
-		width: 164px;
+		width: 124px;
 		transition: all 0.4s;
+		@media(min-width: 992px) {
+			width: 164px;
+		}
 	}
 }
 .site-header__wrapper {
@@ -81,9 +93,11 @@
 		opacity: 1;
 	}
 	.site-header__menu-open & {
-		opacity: 1;
-		visibility: visible;
-		min-height: calc(100vh - 70px);
+		@media(max-width: 991px) {
+			opacity: 1;
+			visibility: visible;
+			min-height: calc(100vh - 70px);
+		}
 	}
 	&:before {
 		content: "";
@@ -102,14 +116,16 @@
 .site-header {
 	.container {
 		&.site-header__menu-open {
-			height: 100vh;
-			.site-header__wrapper {
-				overflow: auto;
-				&:before {
-					height: 1000px;
-					opacity: 1;
-					visibility: visible;	
-					height: 100vh;
+			@media(max-width: 991px) {
+				height: 100vh;
+				.site-header__wrapper {
+					overflow: auto;
+					&:before {
+						height: 1000px;
+						opacity: 1;
+						visibility: visible;	
+						height: 100vh;
+					}
 				}
 			}
 		}
@@ -164,9 +180,6 @@
 			font-weight: 700;
 			@media(min-width: 992px) {
 				font-size: 20px;
-			}
-			@media(min-width: 1680px) {
-				font-size: 14px;
 			}
 			&:hover {
 				color: #ccc;

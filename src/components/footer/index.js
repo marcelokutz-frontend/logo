@@ -1,10 +1,15 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebookF, faLinkedinIn, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import Fade from 'react-reveal/Fade';
 
 import './style.scss';
 import logo from '../../images/logo.svg';
+
+import icoFacebook from '../../images/social/FB.svg';
+import icoTwitter from '../../images/social/TW.svg';
+import icoInstagram from '../../images/social/IG.svg';
+import icoLinkedin from '../../images/social/LI.svg';
+import icoYoutube from '../../images/social/YT.svg';
+
 
 const Footer = () => (
   <footer id="footer" className="site-footer">
@@ -31,11 +36,11 @@ const Footer = () => (
           </div>
           <div className="links-social">
             <p>SEGUICI SUI SOCIAL:</p>
-            <a href="https://www.facebook.com" title="Facebook" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebookF} /></a>
-            <a href="https://www.twitter.com" title="Twitter" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} /></a>
-            <a href="https://www.instagram.com" title="Instagram" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} /></a>
-            <a href="https://www.linkedin.com" title="LinkedIn" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedinIn} /></a>
-            <a href="https://www.youtube.com" title="You Tube" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faYoutube} /></a>
+            <a href="https://www.facebook.com" title="Facebook" target="_blank" rel="noopener noreferrer"><img src={icoFacebook} alt="Facebook" /></a>
+            <a href="https://www.twitter.com" title="Twitter" target="_blank" rel="noopener noreferrer"><img src={icoTwitter} alt="Twitter" /></a>
+            <a href="https://www.instagram.com" title="Instagram" target="_blank" rel="noopener noreferrer"><img src={icoInstagram} alt="Instagram  " /></a>
+            <a href="https://www.linkedin.com" title="LinkedIn" target="_blank" rel="noopener noreferrer"><img src={icoLinkedin} alt="LinkedIn" /></a>
+            <a href="https://www.youtube.com" title="Youtube" target="_blank" rel="noopener noreferrer"><img src={icoYoutube} alt="Youtube" /></a>
           </div>
         </div>
       </div>
